@@ -13,7 +13,7 @@ A command-line quiz application for Data Structures and Algorithms (DSA) multipl
 
 - Python 3.8+
 - MySQL server
-- [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)
+- [mysql-connector-python](https://pypi.org/project/mysql-connector-python/) 
 
 ## Installation
 
