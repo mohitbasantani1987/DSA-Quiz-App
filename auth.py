@@ -1,5 +1,6 @@
 import hashlib
 import os
+import getpass
 from db import get_connection
 
 PEPPER = "SECRET_KEY"
@@ -20,7 +21,7 @@ def signup():
     conn = get_connection()
     cursor = conn.cursor()
     username = input("Choose a username: ")
-    password = input("Choose a password: ")
+    password = getpass.getpass("Choose a password: ") 
 
     # Generate secure hash
     password_hash = create_secure_password(password)  
@@ -58,7 +59,7 @@ def login():
     conn = get_connection()
     cursor = conn.cursor()
     username = input("Username: ")
-    password = input("Password: ")
+    password = getpass.getpass("Password: ")
 
     cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
     user = cursor.fetchone()
